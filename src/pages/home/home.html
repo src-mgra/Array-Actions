@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Array Aktionen
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  Sortierte Liste:
+  <ion-row *ngFor="let num of nList; let i = index; ">
+    {{num}}
+  </ion-row>
+  <br><hr>
+  formatierte Liste über map:
+  <ion-row *ngFor="let user of fUsers; let i = index; ">
+    {{user}}
+  </ion-row>
+  <br><hr>
+  Filter-Liste nach M:
+  <ion-row *ngFor="let prod of fproducts; let i = index; ">
+    {{prod}}
+  </ion-row>
+  <br><hr>
+  Filter-Liste nach AMO:
+  <ion-row *ngFor="let prod of fproducts2; let i = index; ">
+    {{prod.schar}} <br>
+    {{prod.plist}}
+  </ion-row>
+  <br><hr>
+  Aufsummieren mit reduce:
+  <ion-row *ngFor="let price of cartItemPrices; let i = index; ">
+    {{price}} <br>
+  </ion-row>
+  <ion-item>
+    {{summe}}
+  </ion-item>
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p>
+</ion-content>
